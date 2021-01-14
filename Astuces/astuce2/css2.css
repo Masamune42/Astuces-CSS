@@ -19,8 +19,83 @@
 }
 
 @keyframes pulse {
-    to
-    {
+    to {
         box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.01);
+    }
+}
+
+.bloc {
+    width: 600px;
+    height: 400px;
+    /* POur exemple 3 */
+    /* background-color: red; */
+    /* 1 : raccourci de background */
+    /*
+    background-color
+    background-image
+    background-origin
+    background-position
+    background-repeat
+    background-size
+    background-attachment */
+    /* ATTENTION : on écrit background-position / background-size */
+    /* background: #000 url(pic1.jpg) no-repeat center / cover; */
+}
+
+
+h1 {
+    /* 2 : raccourci de font */
+    /*
+    font-style
+    font-weight
+    font-size
+    line-height
+    font-family */
+    /* ATTENTION : on écrit font-size / line-height */
+    font: italic bold 50px / 2 Arial, sans-serif;
+}
+
+.bloc {
+    /* 3 : raccourci d'animation */
+    /*
+    animation-name
+    animation-duration
+    animation-timing-function
+    animation-delay
+    animation-iteration-count
+    animation-direction
+    animation-fill-mode
+    animation-play-state
+    */
+    /* animation: tourne 1s ease-in-out 1s infinite normal; */
+
+    /* 4 : transition */
+    /* 
+    transition-property
+    transition-duration
+    transition-timing-function
+    transition-delay
+    */
+    /* transition: background 1s ease-in-out 0.2s; */
+
+    /* 5 : padding / margin... */
+    /* 
+    1 param : partout
+    2 param : hb gd
+    4 param : h d b g
+    */
+    /* padding: 20px 15px; */
+}
+.bloc:hover {
+    background: lightgreen;
+}
+
+@keyframes tourne {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
