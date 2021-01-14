@@ -19,9 +19,66 @@
 }
 
 @keyframes pulse {
-    to
-    {
+    to {
         box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.01);
     }
 }
 
+body {
+    /* On donne une hauteur et largeur au body */
+    height: 100vh;
+    /* SOLUTION 3 : centrer horizontalement + verticalement */
+    /* On centre tous les enfants d'un élément */
+    /* display: flex; */
+    /* Centrage horizontal */
+    /* justify-content: center; */
+    /* Centrage vertical */
+    /* align-items: center; */
+
+    /* SOLUTION 4 : centrage par grille */
+    /* display: grid; */
+}
+
+.bloc {
+    width: 200px;
+    height: 200px;
+    background: midnightblue;
+    /* SOLUTION 1 : centrer horizontalement + verticalement */
+    /* Ne fonctionne que quand on a un seul enfant à centrer */
+    /* On positionne de façon absolue par rapport au précédent parent avec une position: relative, sinon le body */
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    /* On tire sur X et sur Y de 50% de la taille du bloc */
+    /* transform: translate(-50%, -50%); */
+
+    /* SOLUTION 2 : centrer horizontalement */
+    /* 0 => 0 de marge en haut et en bas, auto => crée une marge automatique pour centrer */
+    /* margin: 0 auto; */
+
+    /* SOLUTION 4 : centrage par grille */
+    /* align-self: center;
+    justify-self: center; */
+}
+
+h1 {
+    /* SOLUTION 5 : centrage de texte dans un bloc */
+    text-align: center;
+    background: salmon;
+    height: 250px;
+    line-height: 250px;
+}
+
+/* SOLUTION 6 : centrage de texte (beaucoup moins utilisé) */
+.tableau {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #000;
+    display: table;
+}
+
+.cellTab {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
